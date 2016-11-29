@@ -65,45 +65,97 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
-          <div id="image-logo"></div>
-          <span class="brand-name"><h1>Lebanese Kebab Palace</h1></span>
+          <a href="index.html"><div id="image-logo"></div></a>
+          <a href="index.html"><span class="brand-name"><h1>Lebanese Kebab Palace</h1></span></a>
           <div class="kebab-image"></div>
           <span><i>"You will simply love it..."</i></span>
         </div>
       </div>
     </div>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
+            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-cutlery"></span>&nbsp;&nbsp;Menu</a></li>
+            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-asterisk"></span>&nbsp;&nbsp;Specialities</a></li>
+            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Testimonials</a></li>
+            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="jumbotron">
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                      <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <img src="assets/images/kebab1.jpg" alt="Chania">
+                      </div>
+
+                      <div class="item">
+                        <img src="assets/images/kebab2.jpg" alt="Chania">
+                      </div>
+
+                      <div class="item">
+                        <img src="assets/images/kebab3.jpg" alt="Flower">
+                      </div>
+
+                      <div class="item">
+                        <img src="assets/images/doner_kebab.jpg" alt="Flower">
+                      </div>
+
+
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+              <h2><span class="glyphicon glyphicon-gift"></span> Today's Specials</h2>
+              <div class="row">
+                <div class="col-lg-12">
+                  <a href="#" class="thumbnail">
+                    <img src="assets/images/specials.jpg" alt="Today's specials">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h2><span class="glyphicon glyphicon-time"></span> Timings</h2>
+              <p>Mon - Fri: 6pm - 11pm</p>
+              <p>Sat: 6pm - 1am</p>
+              <p>Sun: Closed</p>
+            </div>
+            <div class="col-md-4">
+              <h2><span class="glyphicon glyphicon-globe"></span> Location</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            </div>
+          </div>
       </div>
     </div>
 
+
     <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
-
       <hr>
-
       <footer>
         <p>&copy; 2016 Company, Inc.</p>
       </footer>
