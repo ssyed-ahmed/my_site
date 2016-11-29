@@ -1,0 +1,21 @@
+#image-logo {
+  background: url('../images/chef-icon.png') no-repeat;
+  width: 128px;
+  height: 128px;
+  display: inline-block;
+  float: left;
+  margin-top: 20px;
+}
+.brand-name {
+  font-family: 'Oxygen';
+  font-weight: bold;
+  font-size: 1.5em;
+  color: brown;
+}
+.kebab-image {
+  background: url('../images/kebab-icon.png') no-repeat;
+  width: 96px;
+  height: 96px;
+  display: inline-block;
+  float: left;
+}
