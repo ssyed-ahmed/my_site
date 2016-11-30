@@ -6,6 +6,11 @@
       templateUrl: 'assets/menu-item/menu-item.html',
       bindings: {
         menuItem: '<'
-      }
+      },
+      controller: MenuItemController
     });
+
+    function MenuItemController() {
+      var $ctrl = this;
+    }
 })();
