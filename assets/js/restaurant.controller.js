@@ -16,10 +16,10 @@
       {name: 'Admin', imgSuffix: 'lock', path: 'public.admin'}
     ];
 
-    $scope.activeMenu = $scope.menuItems[0].name;
+    $scope.activeMenu = $scope.menuItems[0];
 
     $scope.setActive = function(menuItem) {
-      $scope.activeMenu = menuItem.name;
+      $scope.activeMenu = menuItem;
     };
   }
 })();

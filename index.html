@@ -55,13 +55,7 @@
       <div class="row">
         <div class="col-md-3">
           <ul class="nav nav-pills nav-stacked">
-            <li ng-repeat="menuItem in menuItems" ng-class="{active: activeMenu === menuItem}"><a ui-sref="{{menuItem.path}}"><span class="glyphicon glyphicon-{{menuItem.imgSuffix}}"></span>&nbsp;&nbsp;{{menuItem.name}}</a></li>
-            <!-- <li role="presentation" class="active"><a ui-sref="public.home"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
-            <li role="presentation"><a ui-sref="public.menu"><span class="glyphicon glyphicon-cutlery"></span>&nbsp;&nbsp;Menu</a></li>
-            <li role="presentation"><a ui-sref="public.specialities"><span class="glyphicon glyphicon-asterisk"></span>&nbsp;&nbsp;Specialities</a></li>
-            <li role="presentation"><a ui-sref="public.testimonials"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Testimonials</a></li>
-            <li role="presentation"><a ui-sref="public.contactus"><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;Contact Us</a></li>
-            <li role="presentation"><a ui-sref="public.admin"><span class="glyphicon glyphicon-lock"></span>&nbsp;&nbsp;Admin</a></li> -->
+            <li ng-repeat="menuItem in menuItems" ng-click="setActive(menuItem)" ng-class="{active: activeMenu === menuItem}"><a ui-sref="{{menuItem.path}}"><span class="glyphicon glyphicon-{{menuItem.imgSuffix}}"></span>&nbsp;&nbsp;{{menuItem.name}}</a></li>
           </ul>
         </div>
         <div class="col-md-9">
