@@ -17,6 +17,7 @@
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/public.css">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
@@ -54,18 +55,21 @@
       <div class="row">
         <div class="col-md-3">
           <ul class="nav nav-pills nav-stacked">
-            <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
-            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-cutlery"></span>&nbsp;&nbsp;Menu</a></li>
-            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-asterisk"></span>&nbsp;&nbsp;Specialities</a></li>
-            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Testimonials</a></li>
-            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;Contact Us</a></li>
+            <li role="presentation" class="active"><a ui-sref="public.home"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
+            <li role="presentation"><a ui-sref="public.menu"><span class="glyphicon glyphicon-cutlery"></span>&nbsp;&nbsp;Menu</a></li>
+            <li role="presentation"><a ui-sref="public.specialities"><span class="glyphicon glyphicon-asterisk"></span>&nbsp;&nbsp;Specialities</a></li>
+            <li role="presentation"><a ui-sref="public.testimonials"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Testimonials</a></li>
+            <li role="presentation"><a ui-sref="public.contactus"><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;Contact Us</a></li>
+            <li role="presentation"><a ui-sref="public.admin"><span class="glyphicon glyphicon-lock"></span>&nbsp;&nbsp;Admin</a></li>
           </ul>
         </div>
-        <ui-view>
-          <div class="loading_indicator">
+        <div class="col-md-9">
+          <ui-view>
+            <div class="loading_indicator">
 
-          </div>
-        </ui-view>
+            </div>
+          </ui-view>
+        </div>        
     </div>
 
 
@@ -92,5 +96,8 @@
     <script src="assets/js/restaurant.module.js"></script>
     <script src="assets/public/public.module.js"></script>
     <script src="assets/public/public.routes.js"></script>
+    <script src="assets/menu/menu.service.js"></script>
+    <script src="assets/menu/menu.controller.js"></script>
+    <script src="assets/menu-item/menu-item.component.js"></script>
   </body>
 </html>

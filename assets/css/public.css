@@ -1,3 +1,8 @@
 .loading_indicator {
-  
+
+}
+.text-centre {
+  width: auto;
+  text-align: center;
+  margin: 10px;
 }
