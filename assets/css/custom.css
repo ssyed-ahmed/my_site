@@ -1,5 +1,6 @@
 body {
   background-color: #afeeee;
+  font-family: 'Lora';
 }
 #image-logo {
   background: url('../images/chef-icon.png') no-repeat;
@@ -13,7 +14,7 @@ body {
   font-family: 'Oxygen';
   font-weight: bold;
   font-size: 1.5em;
-  color: brown;
+  color: #fcfc05;
   text-shadow: 1px 1px 1px #282;
 }
 /*.brand-name h1 a:hover, .brand-name h1 a:focus {
@@ -28,4 +29,13 @@ body {
   height: 96px;
   display: inline-block;
   float: left;
+}
+.thumbnail {
+  max-height: 280px;
+}
+.caption {
+  padding: 5px;
+}
+.jumbotron {
+    padding: 12px;
 }
