@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="assets/images/favicon.ico">
 
     <title>Jumbotron Template for Bootstrap</title>
 
@@ -35,43 +35,20 @@
     <![endif]-->
   </head>
 
-  <body>
-
-    <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+  <body ng-app="Restaurant">
+    <header>
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
+        <div class="row">
+          <div class="col-sm-6">
+            <a href="index.html"><div id="image-logo"></div></a>
+            <a href="index.html"><span class="brand-name"><h1>Lebanese Kebab Palace</h1></span></a>
+            <div class="kebab-image"></div>
+            <span><i>"You will simply love it..."</i></span>
+          </div>
         </div>
       </div>
-    </nav> -->
+    </header>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <a href="index.html"><div id="image-logo"></div></a>
-          <a href="index.html"><span class="brand-name"><h1>Lebanese Kebab Palace</h1></span></a>
-          <div class="kebab-image"></div>
-          <span><i>"You will simply love it..."</i></span>
-        </div>
-      </div>
-    </div>
 
     <div class="container">
       <div class="row">
@@ -84,73 +61,11 @@
             <li role="presentation"><a href="#"><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;Contact Us</a></li>
           </ul>
         </div>
-        <div class="col-md-9">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="jumbotron">
-                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#myCarousel" data-slide-to="1"></li>
-                      <li data-target="#myCarousel" data-slide-to="2"></li>
-                      <li data-target="#myCarousel" data-slide-to="3"></li>
-                    </ol>
+        <ui-view>
+          <div class="loading_indicator">
 
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                      <div class="item active">
-                        <img src="assets/images/kebab1.jpg" alt="Chania">
-                      </div>
-
-                      <div class="item">
-                        <img src="assets/images/kebab2.jpg" alt="Chania">
-                      </div>
-
-                      <div class="item">
-                        <img src="assets/images/kebab3.jpg" alt="Flower">
-                      </div>
-
-                      <div class="item">
-                        <img src="assets/images/doner_kebab.jpg" alt="Flower">
-                      </div>
-
-
-                      <!-- Left and right controls -->
-                      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-              <h2><span class="glyphicon glyphicon-gift"></span> Today's Specials</h2>
-              <div class="row">
-                <div class="col-lg-12">
-                  <a href="#" class="thumbnail">
-                    <img src="assets/images/specials.jpg" alt="Today's specials">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <h2><span class="glyphicon glyphicon-time"></span> Timings</h2>
-              <p>Mon - Fri: 6pm - 11pm</p>
-              <p>Sat: 6pm - 1am</p>
-              <p>Sun: Closed</p>
-            </div>
-            <div class="col-md-4">
-              <h2><span class="glyphicon glyphicon-globe"></span> Location</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            </div>
           </div>
-      </div>
+        </ui-view>
     </div>
 
 
@@ -160,15 +75,22 @@
         <p>&copy; 2016 Company, Inc.</p>
       </footer>
     </div> <!-- /container -->
-
+  </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="assets/lib/jquery-2.1.4.min.js"></script>
+    <script src="assets/lib/angular.min.js"></script>
+    <script src="assets/lib/angular-ui-router.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/lib/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+
+    <script src="assets/js/restaurant.module.js"></script>
+    <script src="assets/public/public.module.js"></script>
+    <script src="assets/public/public.routes.js"></script>
   </body>
 </html>
