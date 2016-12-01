@@ -7,6 +7,8 @@
   function TestimonialsController() {
       var $ctrl = this;
 
+      $ctrl.isFormShown = false;
+
       var testimonialsList = [
         {
           statement: 'Definitely would recomment to others....best food ever!!',
@@ -40,7 +42,25 @@
       };
 
       $ctrl.addTestimonial = function() {
+        $ctrl.hideForm();
+        var statement = $ctrl.testimonial.statement;
+        var email = $ctrl.testimonial.email;
+        var occupation = $ctrl.testimonial.occupation;
 
+        var testObj = {
+          statement: statement,
+          email: email,
+          occupation: occupation
+        };
+        testimonialsList.push(testObj);
+      };
+
+      $ctrl.showForm = function() {
+        $ctrl.isFormShown = true;
+      };
+
+      $ctrl.hideForm = function() {
+        $ctrl.isFormShown = false;
       };
   };
 
