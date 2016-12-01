@@ -53,3 +53,14 @@ h3.menu-item-title {
   font-size: .9em;
   font-style: italic;
 }
+.testimonial {
+  color: black;
+  background-color: #16f7bf;
+  border: 1px solid white;
+  padding: 5px;
+  margin-right: 30px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  width: 250px;
+  height: 180px;
+}

@@ -31,5 +31,20 @@
         url: '/specialities',
         templateUrl: 'assets/specialities/specialities.html'
       })
+      .state('public.testimonials', {
+        url: '/testimonials',
+        templateUrl: 'assets/testimonials/testimonials.html',
+        controller: 'TestimonialsController',
+        controllerAs: 'testCtrl'
+      })
+      .state('public.contactus', {
+        url: '/testimonials',
+        templateUrl: 'assets/contactus/contactus.html'
+      })
+      .state('public.admin', {
+        url: '/testimonials',
+        //templateUrl: 'assets/admin/admin.html',
+        controller: 'AdminController'
+      });
   }
 })();

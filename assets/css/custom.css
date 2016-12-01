@@ -29,6 +29,14 @@ body {
   height: 96px;
   display: inline-block;
   float: left;
+  margin-bottom: 10px;
+}
+.halal-image {
+  background: url('../images/halal.jpg') no-repeat;
+  width: 180px;
+  height: 180px;
+  display: inline-block;
+  float: left;
 }
 .thumbnail {
   max-height: 280px;
