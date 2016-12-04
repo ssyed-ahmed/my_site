@@ -36,7 +36,7 @@
       <label class="control-label col-sm-2" for="description">Description:</label>
       <div class="col-sm-5">
         <!-- <input type="textarea" name="description" required class="form-control" id="description" placeholder="Enter Description" ng-model="contactCtrl.contact.description"> -->
-        <textarea required name="description" id="description" cols="100" rows="7"></textarea>
+        <textarea class="form-control" required name="description" id="description" rows="7" placeholder="Enter Description"></textarea>
       </div>
       <span ng-if="contactusForm.description.$error.required && contactusForm.description.$touched">
         Description is required
