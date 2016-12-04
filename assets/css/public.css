@@ -63,7 +63,7 @@ h3.menu-item-title {
   border-radius: 12px;
   width: 250px;
   height: 180px;
-  box-shadow: 8px 8px 2px gray;
+  box-shadow: 8px 8px 2px #0a0003;
 }
 .statement {
   font-style: italic;
@@ -73,4 +73,7 @@ h3.menu-item-title {
 }
 .addTestimonial {
   clear:both;
+}
+.specials {
+  border: 1px solid black;
 }

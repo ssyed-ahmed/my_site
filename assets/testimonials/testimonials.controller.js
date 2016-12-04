@@ -55,6 +55,10 @@
         testimonialsList.push(testObj);
       };
 
+      $ctrl.cancelAddTestimonial = function() {
+        $ctrl.hideForm();
+      };
+
       $ctrl.showForm = function() {
         $ctrl.isFormShown = true;
       };
