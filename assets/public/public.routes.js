@@ -44,7 +44,7 @@
         controllerAs: 'contactCtrl'
       })
       .state('public.admin', {
-        url: '/testimonials',
+        url: '/admin',
         //templateUrl: 'assets/admin/admin.html',
         controller: 'AdminController'
       });
