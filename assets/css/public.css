@@ -4,6 +4,12 @@ body {
   background-color: #61122f;
   font-family: 'Oxygen', sans-serif;
 }
+.headerStyle {
+  background-color: black;
+}
+.spacing {
+  margin-top: 20px;
+}
 .loading-indicator {
     display: block;
     width: 70px;

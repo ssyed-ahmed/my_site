@@ -1,0 +1,51 @@
+<h3>Please fill in the form below to contact us. Our representative will get back ASAP.</h3>
+<hr>
+<fieldset>
+  <form class="form-horizontal" name="contactusForm" novalidate>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Name:</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="name" placeholder="Enter Name" ng-model="contactCtrl.contact.name" name="name" required>
+      </div>
+      <span ng-if="contactusForm.name.$error.required && contactusForm.name.$touched">
+        Name is required
+      </span>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-5">
+        <input type="email" name="email" required class="form-control" id="email" placeholder="Enter Email" ng-model="contactCtrl.contact.email">
+      </div>
+      <span ng-if="contactusForm.email.$error.required && contactusForm.email.$touched">
+        Email is required
+      </span>
+      <span ng-if="contactusForm.email.$invalid && contactusForm.email.$touched">
+        <br>Must be a valid Email address: eg. user@domain format
+      </span>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="subject">Subject:</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="subject" placeholder="Enter Subject" ng-model="contactCtrl.contact.subject" name="subject" required>
+      </div>
+      <span ng-if="contactusForm.subject.$error.required && contactusForm.subject.$touched">
+        Subject is required
+      </span>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="description">Description:</label>
+      <div class="col-sm-5">
+        <!-- <input type="textarea" name="description" required class="form-control" id="description" placeholder="Enter Description" ng-model="contactCtrl.contact.description"> -->
+        <textarea required name="description" id="description" cols="100" rows="7"></textarea>
+      </div>
+      <span ng-if="contactusForm.description.$error.required && contactusForm.description.$touched">
+        Description is required
+      </span>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" required ng-disabled="contactusForm.$invalid" class="btn btn-success" ng-click="contactCtrl.submit()">Submit</button>
+      </div>
+    </div>
+  </form>
+</fieldset>
