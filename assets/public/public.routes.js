@@ -38,8 +38,10 @@
         controllerAs: 'testCtrl'
       })
       .state('public.contactus', {
-        url: '/testimonials',
-        templateUrl: 'assets/contactus/contactus.html'
+        url: '/contactus',
+        templateUrl: 'assets/contactus/contactus.html',
+        controller: 'ContactUsController',
+        controllerAs: 'contactCtrl'
       })
       .state('public.admin', {
         url: '/testimonials',
