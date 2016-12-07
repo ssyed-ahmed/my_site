@@ -13,7 +13,7 @@
               <input type="text" name="username" required class="form-control" id="username" placeholder="Enter Username" ng-model="ctrl.admin.username">
             </div>
             <span ng-if="adminForm.username.$error.required && adminForm.username.$touched">
-              Username is required
+              <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Username is required
             </span>
           </div>
           <div class="form-group">
@@ -22,12 +22,13 @@
               <input type="password" name="password" required class="form-control" id="password" placeholder="Enter password" ng-model="ctrl.admin.password">
             </div>
             <span ng-if="adminForm.password.$error.required && adminForm.password.$touched">
-              Password is required
+              <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Password is required
             </span>
           </div>
         </form>
       </fieldset>
-      <p class="error" ng-hide="ctrl.okClicked && ctrl.isAdminValid"><span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;Invalid Credentials.</p>
+      <p class="error">{{ctrl.okClicked | json}}</p>
+      <p class="error" ng-show="ctrl.okClicked && !ctrl.isAdminValid"><span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;Invalid Credentials.</p>
   </div>
   <div class="modal-footer">
     <button class="btn btn-success" ng-disabled="adminForm.$invalid" ng-click="ctrl.ok(ctrl.admin)">Okay</button>
