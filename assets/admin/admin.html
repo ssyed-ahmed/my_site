@@ -16,17 +16,21 @@
             <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
         </div> -->
 
-        <div modal="showModal" close="cancel()">
-          <div class="modal-header">
-              <h4>Modal Dialog</h4>
-          </div>
-          <div class="modal-body">
-              <p>Example paragraph with some text.</p>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-success" ng-click="ok()">Okay</button>
-            <button class="btn" ng-click="cancel()">Cancel</button>
-          </div>
-        </div>
+<!-- <div ng-controller="AdminController as ctrl"> -->
+  <div modal="showModal" close="ctrl.cancel()">
+    <div class="modal-header">
+        <h4>Modal Dialog</h4>
+    </div>
+    <div class="modal-body">
+        <p>Example paragraph with some text.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-success" ng-click="ctrl.ok()">Okay</button>
+      <button class="btn" ng-click="ctrl.cancel()">Cancel</button>
+    </div>
+  </div>
+<!-- </div> -->
+
+
 
     <!-- </script> -->

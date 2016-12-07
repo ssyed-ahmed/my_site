@@ -22,6 +22,10 @@ body {
     background-color: #FFF;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 .loading-indicator img {
     width: 70px;
     background-color: #FFF;
