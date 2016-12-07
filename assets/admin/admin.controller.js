@@ -5,9 +5,10 @@
     .controller('AdminController', AdminController)
     .controller('ModalInstanceController', ModalInstanceController);
 
-  AdminController.$inject = ['$uibModal', '$rootScope'];
-  function AdminController($uibModal, $rootScope) {
+  AdminController.$inject = ['$uibModal', '$scope', '$rootScope'];
+  function AdminController($uibModal, $scope, $rootScope) {
     var ctrl = this;
+    ctrl.okClicked = false;
 
     //Listen for 'adminClicked' event from the restaurant.controller
     $rootScope.$on('adminClicked', function(event, args) {
@@ -25,17 +26,29 @@
           controller: 'ModalInstanceController',
           controllerAs: 'ctrl',
           bindToController: true
+          // resolve: {
+          //   admin: function() {
+          //     return ctrl.admin;
+          //   }
+          // }
         });
 
     };
   }
 
-  ModalInstanceController.$inject = ['$uibModalInstance'];
-  function ModalInstanceController($uibModalInstance) {
+  ModalInstanceController.$inject = ['$uibModalInstance', '$scope'];
+  function ModalInstanceController($uibModalInstance, $scope) {
     var modalCtrl = this;
+    $scope.okClicked = false;
 
-    modalCtrl.ok = function() {
-      $uibModalInstance.close();
+    modalCtrl.ok = function(admin) {
+      $scope.okClicked = true;
+      if (admin.username !== "admin" && admin.password !== "password") {
+        $scope.isAdminValid = false;
+      } else {
+        $scope.isAdminValid = true;
+        $uibModalInstance.close();
+      }
     };
 
     modalCtrl.cancel = function() {

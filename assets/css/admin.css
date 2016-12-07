@@ -3,7 +3,7 @@
   font-family: 'Oxygen', sans-serif;
 }
 
-.form-group span {
+.form-group span, .modal-body p.error {
   color: red;
   font-family: 'Oxygen', sans-serif;
 }

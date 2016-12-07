@@ -1,61 +1,36 @@
-<!-- Modal Content -->
-<!-- <script type="text/ng-template" id="admin.html"> -->
-        <!-- <div class="modal-header">
-            <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
-        </div>
-        <div class="modal-body" id="modal-body">
-            <ul>
-                <li ng-repeat="item in $ctrl.items">
-                    <a href="#" ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{ item }}</a>
-                </li>
-            </ul>
-            Selected: <b>{{ $ctrl.selected.item }}</b>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
-            <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
-        </div> -->
-
-<!-- <div ng-controller="AdminController as ctrl"> -->
-
-  <div modal="showModal" close="ctrl.cancel()">
-    <div class="modal-header">
-        <h4 class="modal-title" id="modal-title">Admin Authentication</h4>
-    </div>
-    <div class="modal-body">
-        <p>Please enter your admin credentials below</p>
-        <br>
-        <fieldset>
-          <form class="form-horizontal" name="adminForm" novalidate>
-            <div class="form-group">
-              <label class="control-label col-sm-2" for="username">Username:</label>
-              <div class="col-sm-6">
-                <input type="text" name="username" required class="form-control" id="username" placeholder="Enter Username" ng-model="ctrl.admin.username">
-              </div>
-              <span ng-if="adminForm.username.$error.required && adminForm.username.$touched">
-                Username is required
-              </span>
-            </div>
-            <div class="form-group">
-              <label class="control-label col-sm-2" for="password">Password:</label>
-              <div class="col-sm-6">
-                <input type="password" name="password" required class="form-control" id="password" placeholder="Enter password" ng-model="ctrl.admin.password">
-              </div>
-              <span ng-if="adminForm.password.$error.required && adminForm.password.$touched">
-                Password is required
-              </span>
-            </div>
-          </form>
-        </fieldset>
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-success" ng-click="ctrl.ok()">Okay</button>
-      <button class="btn btn-danger" ng-click="ctrl.cancel()">Cancel</button>
-    </div>
+<div modal="showModal" close="ctrl.cancel()">
+  <div class="modal-header">
+      <h4 class="modal-title" id="modal-title"><span class="glyphicon glyphicon-lock"></span>&nbsp;Admin Authentication</h4>
   </div>
-
-<!-- </div> -->
-
-
-
-    <!-- </script> -->
+  <div class="modal-body">
+      <p>Please enter your admin credentials below</p>
+      <br>
+      <fieldset>
+        <form class="form-horizontal" name="adminForm" novalidate>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="username">Username:</label>
+            <div class="col-sm-6">
+              <input type="text" name="username" required class="form-control" id="username" placeholder="Enter Username" ng-model="ctrl.admin.username">
+            </div>
+            <span ng-if="adminForm.username.$error.required && adminForm.username.$touched">
+              Username is required
+            </span>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="password">Password:</label>
+            <div class="col-sm-6">
+              <input type="password" name="password" required class="form-control" id="password" placeholder="Enter password" ng-model="ctrl.admin.password">
+            </div>
+            <span ng-if="adminForm.password.$error.required && adminForm.password.$touched">
+              Password is required
+            </span>
+          </div>
+        </form>
+      </fieldset>
+      <p class="error" ng-hide="ctrl.okClicked && ctrl.isAdminValid"><span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;Invalid Credentials.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-success" ng-disabled="adminForm.$invalid" ng-click="ctrl.ok(ctrl.admin)">Okay</button>
+    <button class="btn btn-danger" ng-click="ctrl.cancel()">Cancel</button>
+  </div>
+</div>
