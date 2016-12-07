@@ -19,7 +19,7 @@
 
         var modalInstance = $uibModal.open({
           templateUrl: 'assets/admin/admin.html',
-          size: 'lg',
+          size: 'md',
           keyboard: true,
           backdrop: 'static',
           controller: 'ModalInstanceController',

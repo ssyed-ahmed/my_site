@@ -17,18 +17,43 @@
         </div> -->
 
 <!-- <div ng-controller="AdminController as ctrl"> -->
+
   <div modal="showModal" close="ctrl.cancel()">
     <div class="modal-header">
-        <h4>Modal Dialog</h4>
+        <h4 class="modal-title" id="modal-title">Admin Authentication</h4>
     </div>
     <div class="modal-body">
-        <p>Example paragraph with some text.</p>
+        <p>Please enter your admin credentials below</p>
+        <br>
+        <fieldset>
+          <form class="form-horizontal" name="adminForm" novalidate>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="username">Username:</label>
+              <div class="col-sm-6">
+                <input type="text" name="username" required class="form-control" id="username" placeholder="Enter Username" ng-model="ctrl.admin.username">
+              </div>
+              <span ng-if="adminForm.username.$error.required && adminForm.username.$touched">
+                Username is required
+              </span>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="password">Password:</label>
+              <div class="col-sm-6">
+                <input type="password" name="password" required class="form-control" id="password" placeholder="Enter password" ng-model="ctrl.admin.password">
+              </div>
+              <span ng-if="adminForm.password.$error.required && adminForm.password.$touched">
+                Password is required
+              </span>
+            </div>
+          </form>
+        </fieldset>
     </div>
     <div class="modal-footer">
       <button class="btn btn-success" ng-click="ctrl.ok()">Okay</button>
-      <button class="btn" ng-click="ctrl.cancel()">Cancel</button>
+      <button class="btn btn-danger" ng-click="ctrl.cancel()">Cancel</button>
     </div>
   </div>
+
 <!-- </div> -->
 
 
