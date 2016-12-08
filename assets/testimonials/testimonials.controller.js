@@ -11,7 +11,7 @@
 
       var testimonialsList = [
         {
-          statement: 'Definitely would recomment to others....best food ever!!',
+          statement: 'Definitely would recommend to others....best food ever!!',
           email: 'ash44@junk.com',
           occupation: 'Writer'
         },
