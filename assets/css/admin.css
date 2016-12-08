@@ -1,9 +1,9 @@
-.modal-header h4, .modal-body p, .form-group label {
+.modal-header h4, .modal-body p, #adminForm .form-group label {
   color: black;
   font-family: 'Oxygen', sans-serif;
 }
 
-.form-group span, .modal-body p.error {
+#adminForm .form-group span, .modal-body p.error {
   color: red;
   font-family: 'Oxygen', sans-serif;
 }

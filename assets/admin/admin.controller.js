@@ -5,8 +5,8 @@
     .controller('AdminController', AdminController)
     .controller('ModalInstanceController', ModalInstanceController);
 
-  AdminController.$inject = ['$uibModal', '$scope', '$rootScope'];
-  function AdminController($uibModal, $scope, $rootScope) {
+  AdminController.$inject = ['$uibModal', '$scope', '$rootScope', '$location'];
+  function AdminController($uibModal, $scope, $rootScope, $location) {
     var ctrl = this;
     ctrl.okClicked = false;
 
@@ -36,8 +36,8 @@
     };
   }
 
-  ModalInstanceController.$inject = ['$uibModalInstance', '$scope'];
-  function ModalInstanceController($uibModalInstance, $scope) {
+  ModalInstanceController.$inject = ['$uibModalInstance', '$scope', '$location'];
+  function ModalInstanceController($uibModalInstance, $scope, $location) {
     var modalCtrl = this;
     $scope.okClicked = false;
 
