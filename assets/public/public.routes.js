@@ -47,6 +47,10 @@
         url: '/admin',
         //templateUrl: 'assets/admin/admin.html',
         controller: 'AdminController'
+      })
+      .state('public.todaysspecials', {
+        url:'/todaysspecials',
+        templateUrl: 'assets/todaysspecials/todaysspecials.html'
       });
   }
 })();
