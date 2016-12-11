@@ -8,6 +8,6 @@
   font-family: 'Oxygen', sans-serif;
 }
 
-.form-group span > span {
+#adminForm .form-group span > span {
   font-family: 'Glyphicons Halflings'
 }
