@@ -45,7 +45,6 @@
       })
       .state('public.admin', {
         url: '/admin',
-        //templateUrl: 'assets/admin/admin.html',
         controller: 'AdminController'
       })
       .state('public.todaysspecials', {
