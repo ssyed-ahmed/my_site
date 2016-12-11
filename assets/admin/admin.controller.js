@@ -42,11 +42,11 @@
     $scope.okClicked = false;
 
     modalCtrl.ok = function(admin) {
-      $scope.okClicked = true;
+      modalCtrl.okClicked = true;
       if (admin.username !== "admin" && admin.password !== "password") {
-        $scope.isAdminValid = false;
+        modalCtrl.isAdminValid = false;
       } else {
-        $scope.isAdminValid = true;
+        modalCtrl.isAdminValid = true;
         $uibModalInstance.close();
       }
     };
