@@ -2,6 +2,9 @@ body {
   background-color: #afeeee;
   font-family: 'Lora';
 }
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Lora';
+}
 #image-logo {
   background: url('../images/chef-icon.png') no-repeat;
   width: 128px;
@@ -17,34 +20,19 @@ body {
   color: #fcfc05;
   text-shadow: 1px 1px 1px #282;
 }
-/*.brand-name h1 a:hover, .brand-name h1 a:focus {
-  text-decoration: none;
-}*/
 .brand-name h1 {
   text-decoration: none;
   font-size: 250%;
 }
-/*.kebab-image {
-  background: url('../images/loveit.jpg') no-repeat;
-  width: 450px;
-  height: 120px;
-  display: inline-block;
-  float: left;
-  margin-bottom: 10px;
-}*/
-.halal-image {
-  background: url('../images/halal.jpg') no-repeat;
-  width: 180px;
-  height: 180px;
-  display: inline-block;
-  float: left;
-}
 .thumbnail {
   max-height: 280px;
+  border: 1px solid gold;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 .caption {
   padding: 5px;
 }
-/*.jumbotron {
-    padding: 12px;
-}*/
+.jumbotron {
+  background-color: black;
+}

@@ -5,7 +5,7 @@ body {
   font-family: 'Oxygen', sans-serif;
 }
 .headerStyle {
-  background-color: black;
+  background-color: #1c7223;
   border-bottom: 1px solid #999;
   border-top: 1px solid #999;
 }
@@ -26,7 +26,7 @@ body {
     right: 0;
     margin: 0 auto;
     top: 40%;
-    z-index: 100;
+    z-index: 500;
     background-color: #FFF;
 }
 
@@ -94,4 +94,13 @@ h3.menu-item-title {
 }
 .specials {
   border: 1px solid black;
+}
+.timings {
+  color: #337AB7;
+  font-weight: bolder;
+}
+.titleStyle {
+  background-color: black;
+  border-radius: 12px;
+  padding: 10px;
 }
