@@ -41,6 +41,10 @@
       $ctrl.hideForm = function() {
         $ctrl.isFormShown = false;
       };
+
+      $ctrl.getStars = function() {
+        return [1,2,3];
+      };
   };
 
 })();

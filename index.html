@@ -45,6 +45,7 @@
               <ul class="nav nav-pills nav-stacked">
                 <li ng-repeat="menuItem in menuItems" ng-click="setActive(menuItem)" ng-class="{active: activeMenu === menuItem}"><a ui-sref="{{menuItem.path}}"><span class="glyphicon glyphicon-{{menuItem.imgSuffix}}"></span>&nbsp;&nbsp;{{menuItem.name}}</a></li>
                 <li ng-click="setActive({name:'Admin'})" ng-class="{active: activeMenu === {name:'Admin'}}"><a ui-sref="public.admin"><span class="glyphicon glyphicon-lock"></span>&nbsp;&nbsp;Admin</a></li>
+                <li ng-click="setActive({name:'Test'})" ng-class="{active: activeMenu === {name:'Test'}}"><a ui-sref="public.test"><span class="glyphicon glyphicon-equalizer"></span>&nbsp;&nbsp;Test</a></li>
               </ul>
             </div>
             <div class="col-md-10">

@@ -1,6 +1,10 @@
 <div class="spacing">
   <div class="col-sm-6 col-md-4 testimonial">
     <p class="statement"><span class="glyphicon glyphicon-pushpin"></span> "{{$ctrl.testimonial.statement}}"</p>
+    <p>{{testCtrl.getStars()}}</p>
+    <div ng-repeat="n in $ctrl.getStars()">
+      <span class="glyphicon glyphicon-star"></span>
+    </div>
     <hr>
     <p style="text-align:center"><span class="glyphicon glyphicon-envelope"></span> {{$ctrl.testimonial.email}}</p>
     <p style="float:right"><span class="glyphicon glyphicon-education"></span> {{$ctrl.testimonial.occupation}}</p>

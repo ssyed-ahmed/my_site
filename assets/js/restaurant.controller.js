@@ -58,6 +58,8 @@
       //Check for admin path
       if (path === "admin") {
         return {name: 'Admin'};
+      } else if (path === "test") {
+        return {name: 'Test'};
       }
       return menuItem;
     };
