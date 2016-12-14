@@ -43,5 +43,29 @@
     testCtrl.getCurrentPage = function() {
       return testCtrl.currentPage;
     };
+
+    testCtrl.setCurrentPage = function(pageNum) {
+      testCtrl.currentPage = pageNum;
+    };
+
+    testCtrl.setPage = function(pageNum) {
+      testCtrl.setCurrentPage(pageNum);
+    };
+
+    testCtrl.range = function() {
+      var rangeSize = 12;
+      var ret = [];
+      var start;
+
+      start = testCtrl.getCurrentPage();
+      if (start > testCtrl.pageCount() - rangeSize) {
+        start = testCtrl.pageCount() - rangeSize + 1;
+      }
+
+      for (var i = start; i < start + rangeSize; i++) {
+        ret.push(i);
+      }
+      return ret;
+    };
   }
 })();

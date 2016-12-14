@@ -1,1 +1,40 @@
 <h1 class="center-text spacing">Pagination</h1>
+
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in testCtrl.menuItems |
+        offset: currentPage*itemsPerPage |
+        limitTo: testCtrl.itemsPerPage">
+        <!-- <td>{{item.id}}</td> -->
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <td colspan="3">
+        <div class="pagination">
+          <ul>
+            <li ng-class="testCtrl.previousPageDisabled()">
+              <a href ng-click="testCtrl.getPreviousPage()">« Prev</a>
+            </li>
+            <li ng-repeat="n in testCtrl.range()"
+              ng-class="{active: n == testCtrl.getCurrentPage()}" ng-click="testCtrl.setPage(n)">
+              <a href="#">{{n+1}}</a>
+            </li>
+            <li ng-class="testCtrl.nextPageDisabled()">
+              <a href ng-click="testCtrl.getNextPage()">Next »</a>
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tfoot>
+  </table>
+</div>
