@@ -32,7 +32,7 @@
       return testCtrl.getCurrentPage() === testCtrl.pageCount() ? "disabled": "";
     };
 
-    testCtrl.prviousPageDisabled = function () {
+    testCtrl.previousPageDisabled = function () {
       return testCtrl.getCurrentPage() === 0 ? "disabled": "";
     };
 
