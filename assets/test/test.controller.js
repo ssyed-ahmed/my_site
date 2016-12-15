@@ -4,17 +4,13 @@
   angular.module('public')
     .controller('TestController', TestController);
 
-  TestController.$inject = ['MenuService'];
-  function TestController(MenuService) {
+  TestController.$inject = ['menuItems'];
+  function TestController(menuItems) {
     var testCtrl = this;
 
-    testCtrl.menuItems = [];
+    testCtrl.menuItems = menuItems.menu_items;
     testCtrl.currentPage = 0;
     testCtrl.itemsPerPage = 12;
-
-    testCtrl.getAllMenuItems = function () {
-      testCtrl.menuItems = MenuService.getMenuItems();
-    };
 
     testCtrl.getNextPage = function () {
       if (testCtrl.getCurrentPage() < testCtrl.pageCount()) {
@@ -29,7 +25,7 @@
     };
 
     testCtrl.pageCount = function() {
-      return Math.ceil(testCtrl.menuItems/testCtrl.itemsPerPage) - 1;
+      return Math.ceil(testCtrl.menuItems.length/testCtrl.itemsPerPage) - 1;
     };
 
     testCtrl.nextPageDisabled = function () {

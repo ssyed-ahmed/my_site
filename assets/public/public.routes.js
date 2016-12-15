@@ -51,11 +51,16 @@
         url:'/todaysspecials',
         templateUrl: 'assets/todaysspecials/todaysspecials.html'
       })
-      .state('public.test', {
-        url: '/test',
+      .state('public.pagination', {
+        url: '/pagination',
         templateUrl: 'assets/test/test.html',
         controller: 'TestController',
-        controllerAs: 'testCtrl'
+        controllerAs: 'testCtrl',
+        resolve: {
+          menuItems: ['MenuService', function(MenuService) {
+            return MenuService.getMenuItems();
+          }]
+        }
       });
   }
 })();

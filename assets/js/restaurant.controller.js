@@ -12,8 +12,8 @@
       {name: 'Menu', imgSuffix: 'cutlery', path: 'public.menu'},
       {name: 'Specialities', imgSuffix: 'asterisk', path: 'public.specialities'},
       {name: 'Testimonials', imgSuffix: 'user', path: 'public.testimonials'},
-      {name: 'Contact Us', imgSuffix: 'earphone', path: 'public.contactus'}
-      //{name: 'Admin', imgSuffix: 'lock', path: 'public.admin'}
+      {name: 'Contact Us', imgSuffix: 'earphone', path: 'public.contactus'},
+      {name: 'Test', imgSuffix: 'equalizer', path: 'public.pagination'}
     ];
 
     $scope.activeMenu = $scope.menuItems[0];
@@ -58,8 +58,6 @@
       //Check for admin path
       if (path === "admin") {
         return {name: 'Admin'};
-      } else if (path === "test") {
-        return {name: 'Test'};
       }
       return menuItem;
     };

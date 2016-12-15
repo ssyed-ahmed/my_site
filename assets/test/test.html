@@ -1,7 +1,7 @@
 <h1 class="center-text spacing">Pagination</h1>
 
-<div>
-  <table class="table table-striped">
+<div id="paginationTable">
+  <table class="table table-hover">
     <thead>
       <tr>
         <th>Id</th>
@@ -11,9 +11,9 @@
     </thead>
     <tbody>
       <tr ng-repeat="item in testCtrl.menuItems |
-        offset: currentPage*itemsPerPage |
+        offset: testCtrl.currentPage * testCtrl.itemsPerPage |
         limitTo: testCtrl.itemsPerPage">
-        <!-- <td>{{item.id}}</td> -->
+        <td>{{item.id}}</td>
         <td>{{item.name}}</td>
         <td>{{item.description}}</td>
       </tr>
