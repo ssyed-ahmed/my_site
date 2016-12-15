@@ -19,16 +19,16 @@
     <div class="card-details">
       <table>
         <tr>
-          <td>Large portion name : </td><td>{{$ctrl.menuItem.large_portion_name}}</td>
+          <td>Large portion name : </td><td>{{$ctrl.getMenuLargePortion()}}</td>
         </tr>
         <tr>
           <td>Large portion price : </td><td>{{$ctrl.menuItem.price_large | currency}}</td>
         </tr>
         <tr>
-          <td>Small portion name : </td><td>{{$ctrl.menuItem.small_portion_name}}</td>
+          <td>Small portion name : </td><td>{{$ctrl.getMenuSmallPortion()}}</td>
         </tr>
         <tr>
-          <td>Small portion price : </td><td>{{$ctrl.menuItem.price_small | currency}}</td>
+          <td>Small portion price : </td><td>{{$ctrl.getMenuSmallPrice()}}</td>
         </tr>
       </table>
     </div>
