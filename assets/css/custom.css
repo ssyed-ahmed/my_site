@@ -185,3 +185,7 @@ h1,h2,h3,h4,h5,h6 {
 #paginationTable table body {
   color: black;
 }
+
+.table-hover > tbody > tr:hover {
+  background-color: #000;
+}

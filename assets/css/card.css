@@ -1,0 +1,39 @@
+.card-container {
+  width: 280px;
+  height: 250px;
+  border: 1px solid gray;
+  background-color: #000;
+  margin: 10px;
+  padding: 8px;
+}
+.card-title {
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  background-color: red;
+  margin-bottom: 5px;
+}
+.card-description {
+  height: 90px;
+  /*border: 1px solid yellow;*/
+  padding: 5px;
+  color: #000;
+  background-color: beige;
+  text-align: justify;
+}
+.card-details {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.card-details table td:nth-child(odd) {
+  padding-top: 2px;
+  padding-left: 8px;
+  padding-bottom: 2px;
+  text-align: left;
+}
+.card-details table td:nth-child(even) {
+  padding-top: 2px;
+  padding-left: 60px;
+  padding-bottom: 2px;
+  text-align: center;
+}

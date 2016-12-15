@@ -1,6 +1,6 @@
-<h1 class="center-text spacing">Pagination</h1>
+<h1 class="center-text spacing">List of Menu Items</h1>
 
-<div id="paginationTable">
+<div class="container" id="paginationTable">
   <table class="table table-hover">
     <thead>
       <tr>
@@ -20,17 +20,17 @@
     </tbody>
     <tfoot>
       <td colspan="3">
-        <div class="pagination">
+        <div class="pagination pagination-centered">
           <ul>
             <li ng-class="testCtrl.previousPageDisabled()">
-              <a href ng-click="testCtrl.getPreviousPage()">« Prev</a>
+              <a href ng-click="testCtrl.getPreviousPage()"><span class="glyphicon glyphicon-chevron-left"></span> Prev</a>
             </li>
             <li ng-repeat="n in testCtrl.range()"
               ng-class="{active: n == testCtrl.getCurrentPage()}" ng-click="testCtrl.setPage(n)">
               <a href>{{n+1}}</a>
             </li>
             <li ng-class="testCtrl.nextPageDisabled()">
-              <a href ng-click="testCtrl.getNextPage()">Next »</a>
+              <a href ng-click="testCtrl.getNextPage()">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
             </li>
           </ul>
         </div>
