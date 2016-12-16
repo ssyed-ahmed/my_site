@@ -3,8 +3,8 @@
 <!-- <p>{{ menuCtrl.menuItems | json}}</p> -->
 
 <div class="btn-group" role="group" style="float:right;margin-right:50px;">
-  <button type="button" class="btn btn-default" tooltip-placement="top-right" uib-tooltip="List View"><span class="glyphicon glyphicon-th-list"></span></button>
-  <button type="button" class="btn btn-default" tooltip-placement="top-right" uib-tooltip="Card View"><span class="glyphicon glyphicon-th-large"></span></button>
+  <button type="button" class="btn btn-default" tooltip-placement="top-right" uib-tooltip="List View" tooltip-class="customClass"><span class="glyphicon glyphicon-th-list"></span></button>
+  <button type="button" class="btn btn-default" tooltip-placement="top-right" uib-tooltip="Card View" tooltip-class="customClass"><span class="glyphicon glyphicon-th-large"></span></button>
 </div>
 <div style="clear:both">
   <menu-item ng-repeat="menuItem in menuCtrl.menuItems.menu_items" menu-item="menuItem"></menu-item>

@@ -190,9 +190,13 @@ h1,h2,h3,h4,h5,h6 {
   background-color: #000;
 }
 .tooltip.customClass .tooltip-inner {
+  font-weight: bold;
   color: #880000;
   background-color: #ffff66;
   /*color: #000;
   background-color: yellow;*/
   box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.tooltip.customClass .tooltip-arrow {
+  display: none;
 }
