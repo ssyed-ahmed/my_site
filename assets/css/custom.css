@@ -39,7 +39,10 @@ h1,h2,h3,h4,h5,h6 {
 
 /** Pagination styles */
 .pagination {
-  margin: 20px 0;
+  margin-left: 260px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 0;
 }
 
 .pagination ul {
