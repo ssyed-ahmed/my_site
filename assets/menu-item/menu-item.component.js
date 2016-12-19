@@ -31,5 +31,13 @@
         }
         return ret;
       };
+
+      $ctrl.toShowTooltip = function() {
+        var input = $ctrl.menuItem.name;
+        if(input && input.length > 26) {
+          return true;
+        }
+        return false;
+      };
     }
 })();

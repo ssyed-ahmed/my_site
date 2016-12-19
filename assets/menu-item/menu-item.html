@@ -10,8 +10,8 @@
   </div> -->
 
   <div class="card-container">
-    <div class="card-title">
-      <strong>{{$ctrl.menuItem.name}}</strong>
+    <div class="card-title" tooltip-placement="top-right" uib-tooltip="{{$ctrl.menuItem.name}}" tooltip-enable="$ctrl.toShowTooltip()" tooltip-class="customClass">
+      <strong>{{$ctrl.menuItem.name | truncate: 26}}</strong>
     </div>
     <div class="card-description" tooltip-placement="top-right" uib-tooltip="{{$ctrl.menuItem.description}}" tooltip-class="customClass">
       {{$ctrl.menuItem.description | truncate: 85}}
