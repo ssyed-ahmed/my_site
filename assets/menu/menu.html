@@ -2,9 +2,9 @@
 
 <!-- <p>{{ menuCtrl.menuItems | json}}</p> -->
 
-<div class="btn-group" role="group" style="float:right;margin-right:50px;">
-  <button type="button" class="btn btn-default" tooltip-placement="top-right" uib-tooltip="List View" tooltip-class="customClass"><span class="glyphicon glyphicon-th-list"></span></button>
-  <button type="button" class="btn btn-default" tooltip-placement="top-right" uib-tooltip="Card View" tooltip-class="customClass"><span class="glyphicon glyphicon-th-large"></span></button>
+<div class="btn-group" role="group" style="float:right;margin-right:47px;">
+  <button type="button" value="card" ng-model="viewType" ng-class="{'active': (viewType == 'card')}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="Card View" tooltip-class="customClass"><span class="glyphicon glyphicon-th"></span></button>
+  <button type="button" value="list" ng-model="viewType" ng-class="{'active': (viewType == 'list')}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="List View" tooltip-class="customClass"><span class="glyphicon glyphicon-th-list"></span></button>
 </div>
 <div style="clear:both">
   <menu-item ng-repeat="menuItem in menuCtrl.menuItems.menu_items" menu-item="menuItem"></menu-item>

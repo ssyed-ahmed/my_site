@@ -13,7 +13,8 @@
 
         //clear the form after submit
         $scope.contactusForm.$setPristine();
-        contactCtrl.contact = {};
+        $scope.contact = {};
+        $scope.contactusForm.$setUntouched();
     };
   }
 })();

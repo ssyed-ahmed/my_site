@@ -26,11 +26,6 @@
           controller: 'ModalInstanceController',
           controllerAs: 'ctrl',
           bindToController: true
-          // resolve: {
-          //   admin: function() {
-          //     return ctrl.admin;
-          //   }
-          // }
         });
 
     };
@@ -53,6 +48,7 @@
 
     modalCtrl.cancel = function() {
       $uibModalInstance.dismiss();
+      $location.path('/');
     };
   }
 })();
