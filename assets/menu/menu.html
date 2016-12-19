@@ -1,11 +1,69 @@
-<!-- <h1 class="text-centre">Welcome to Menu</h1> -->
-
-<!-- <p>{{ menuCtrl.menuItems | json}}</p> -->
-
 <div class="btn-group" role="group" style="float:right;margin-right:47px;">
-  <button type="button" value="card" ng-model="viewType" ng-class="{'active': (viewType == 'card')}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="Card View" tooltip-class="customClass"><span class="glyphicon glyphicon-th"></span></button>
-  <button type="button" value="list" ng-model="viewType" ng-class="{'active': (viewType == 'list')}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="List View" tooltip-class="customClass"><span class="glyphicon glyphicon-th-list"></span></button>
+  <button type="button" ng-click="menuCtrl.renderCardView()" value="card" ng-model="viewType" ng-class="{'active': (viewType == 'card')}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="Card View" tooltip-class="customClass">
+    <span class="glyphicon glyphicon-th"></span>
+  </button>
+  <button type="button" ng-click="menuCtrl.renderListView()" value="list" ng-model="viewType" ng-class="{'active': (viewType == 'list')}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="List View" tooltip-class="customClass">
+    <span class="glyphicon glyphicon-th-list"></span>
+  </button>
 </div>
-<div style="clear:both">
-  <menu-item ng-repeat="menuItem in menuCtrl.menuItems.menu_items" menu-item="menuItem"></menu-item>
+<div style="clear:both" ng-show="menuCtrl.isCardView">
+
+  <menu-item ng-repeat="menuItem in menuCtrl.menuItems  |
+    offset: menuCtrl.currentPage * menuCtrl.itemsPerPage |
+    limitTo: menuCtrl.itemsPerPage" menu-item="menuItem">
+  </menu-item>
+
+  <div class="pagination pagination-centered">
+    <ul>
+      <li ng-class="menuCtrl.previousPageDisabled()">
+        <a href ng-click="menuCtrl.getPreviousPage()"><span class="glyphicon glyphicon-chevron-left"></span> Prev</a>
+      </li>
+      <li ng-repeat="n in menuCtrl.range()"
+        ng-class="{active: n == menuCtrl.getCurrentPage()}" ng-click="menuCtrl.setPage(n)">
+        <a href>{{n+1}}</a>
+      </li>
+      <li ng-class="menuCtrl.nextPageDisabled()">
+        <a href ng-click="menuCtrl.getNextPage()">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container" id="paginationTable" ng-hide="menuCtrl.isCardView">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="menuItem in menuCtrl.menuItems |
+        offset: menuCtrl.currentPage * menuCtrl.itemsPerPage |
+        limitTo: menuCtrl.itemsPerPage">
+        <td>{{menuItem.id}}</td>
+        <td>{{menuItem.name}}</td>
+        <td>{{menuItem.description}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <td colspan="3">
+        <div class="pagination pagination-centered">
+          <ul>
+            <li ng-class="menuCtrl.previousPageDisabled()">
+              <a href ng-click="menuCtrl.getPreviousPage()"><span class="glyphicon glyphicon-chevron-left"></span> Prev</a>
+            </li>
+            <li ng-repeat="n in menuCtrl.range()"
+              ng-class="{active: n == menuCtrl.getCurrentPage()}" ng-click="menuCtrl.setPage(n)">
+              <a href>{{n+1}}</a>
+            </li>
+            <li ng-class="menuCtrl.nextPageDisabled()">
+              <a href ng-click="menuCtrl.getNextPage()">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tfoot>
+  </table>
 </div>
