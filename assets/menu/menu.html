@@ -13,7 +13,7 @@
         <div class="form-group has-feedback searchStyle">
           <!-- <label class="control-label col-sm-2 searchLabel">Search</label> -->
           <div class=" col-md-10">
-            <input type="text" class="form-control" placeholder="Search" />
+            <input type="text" class="form-control" placeholder="Search" ng-model="search" autofocus>
             <i class="form-control-feedback glyphicon glyphicon-search"></i>
           </div>
         </div>
@@ -26,7 +26,8 @@
 
   <menu-item ng-repeat="menuItem in menuCtrl.menuItems  |
     offset: menuCtrl.currentPage * menuCtrl.itemsPerPage |
-    limitTo: menuCtrl.itemsPerPage" menu-item="menuItem">
+    limitTo: menuCtrl.itemsPerPage |
+    filter:search" menu-item="menuItem">
   </menu-item>
 
   <div class="pagination pagination-centered">
@@ -57,7 +58,7 @@
     <tbody>
       <tr ng-repeat="menuItem in menuCtrl.menuItems |
         offset: menuCtrl.currentPage * menuCtrl.itemsPerPage |
-        limitTo: menuCtrl.itemsPerPage">
+        limitTo: menuCtrl.itemsPerPage | filter:search">
         <td>{{menuItem.id}}</td>
         <td>{{menuItem.name}}</td>
         <td>{{menuItem.description}}</td>
