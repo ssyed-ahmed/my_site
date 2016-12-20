@@ -1,12 +1,27 @@
-<!-- <p>{{menuCtrl.viewType | json}}</p> -->
-<div class="btn-group" role="group" style="float:right;margin-right:47px;">
-  <button type="button" ng-click="menuCtrl.renderCardView()" value="card" ng-model="viewType" ng-class="{'active': (viewType == menuCtrl.viewType)}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="Card View" tooltip-class="customClass">
-    <span class="glyphicon glyphicon-th"></span>
-  </button>
-  <button type="button" ng-click="menuCtrl.renderListView()" value="list" ng-model="viewType" ng-class="{'active': (viewType == menuCtrl.viewType)}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="List View" tooltip-class="customClass">
-    <span class="glyphicon glyphicon-th-list"></span>
-  </button>
+<div style="float:right;margin-right:6px">
+  <div style="float:left">
+    <div class="btn-group" role="group" style="float:left;padding-right:8px">
+      <button type="button" ng-click="menuCtrl.renderCardView()" value="card" ng-model="viewType" ng-class="{'active': (viewType == menuCtrl.viewType)}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="Card View" tooltip-class="customClass">
+        <span class="glyphicon glyphicon-th"></span>
+      </button>
+      <button type="button" ng-click="menuCtrl.renderListView()" value="list" ng-model="viewType" ng-class="{'active': (viewType == menuCtrl.viewType)}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="List View" tooltip-class="customClass">
+        <span class="glyphicon glyphicon-th-list"></span>
+      </button>
+    </div>
+    <div style="float:right">
+      <form role="form" class="form-horizontal">
+        <div class="form-group has-feedback searchStyle">
+          <!-- <label class="control-label col-sm-2 searchLabel">Search</label> -->
+          <div class=" col-md-10">
+            <input type="text" class="form-control" placeholder="Search" />
+            <i class="form-control-feedback glyphicon glyphicon-search"></i>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
+
 <div style="clear:both" ng-show="menuCtrl.isCardView">
 
   <menu-item ng-repeat="menuItem in menuCtrl.menuItems  |

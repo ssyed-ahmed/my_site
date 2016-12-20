@@ -104,3 +104,9 @@ h3.menu-item-title {
   border-radius: 12px;
   padding: 10px;
 }
+.searchStyle {
+  color: #000;
+}
+.searchLabel {
+  color: #fff;
+}
