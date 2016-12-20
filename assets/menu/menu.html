@@ -1,8 +1,9 @@
+<!-- <p>{{menuCtrl.viewType | json}}</p> -->
 <div class="btn-group" role="group" style="float:right;margin-right:47px;">
-  <button type="button" ng-click="menuCtrl.renderCardView()" value="card" ng-model="viewType" ng-class="{'active': (viewType == 'card')}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="Card View" tooltip-class="customClass">
+  <button type="button" ng-click="menuCtrl.renderCardView()" value="card" ng-model="viewType" ng-class="{'active': (viewType == menuCtrl.viewType)}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="Card View" tooltip-class="customClass">
     <span class="glyphicon glyphicon-th"></span>
   </button>
-  <button type="button" ng-click="menuCtrl.renderListView()" value="list" ng-model="viewType" ng-class="{'active': (viewType == 'list')}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="List View" tooltip-class="customClass">
+  <button type="button" ng-click="menuCtrl.renderListView()" value="list" ng-model="viewType" ng-class="{'active': (viewType == menuCtrl.viewType)}" class="btn btn-primary" tooltip-placement="top-right" uib-tooltip="List View" tooltip-class="customClass">
     <span class="glyphicon glyphicon-th-list"></span>
   </button>
 </div>

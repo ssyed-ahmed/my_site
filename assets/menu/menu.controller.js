@@ -15,13 +15,16 @@
     $ctrl.menuItems = menuItems.menu_items;
     $ctrl.currentPage = 0;
     $ctrl.itemsPerPage = 12;
+    $ctrl.viewType = "card";
 
     $ctrl.renderCardView = function() {
       $ctrl.isCardView = true;
+      $ctrl.viewType = "card";
     };
 
     $ctrl.renderListView = function() {
       $ctrl.isCardView = false;
+      $ctrl.viewType = "list";
     };
 
     $ctrl.getNextPage = function () {
