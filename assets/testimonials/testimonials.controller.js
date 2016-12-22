@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('public')
+  angular.module('testimonials')
     .controller('TestimonialsController', TestimonialsController);
 
   TestimonialsController.$inject = ['TestimonialsService'];

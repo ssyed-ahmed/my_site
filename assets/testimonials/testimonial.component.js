@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('public')
+  angular.module('testimonials')
     .component('testimonial', {
       templateUrl: 'assets/testimonials/testimonial.template.html',
       controller: TestimonialController,
