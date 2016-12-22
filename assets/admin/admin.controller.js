@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('public')
+  angular.module('admin')
     .controller('AdminController', AdminController)
     .controller('ModalInstanceController', ModalInstanceController);
 
