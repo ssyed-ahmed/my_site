@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('public')
+  angular.module('menu')
     .service('MenuService', MenuService);
 
   MenuService.$inject = ['$http', 'ApiPath'];

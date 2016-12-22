@@ -72,6 +72,9 @@ h1,h2,h3,h4,h5,h6 {
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-left-width: 0;
+  margin: 3px 3px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .pagination ul > li > a:hover,
