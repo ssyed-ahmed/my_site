@@ -2,6 +2,7 @@
   <h1 class="center-text">Statistics</h1>
 
   <div class="row">
+    <!-- Line Chart -->
     <div class="col-sm-6">
       <div class="panel panel-primary" ng-controller="StatsLineController as lineCtrl">
         <div class="panel-heading">
@@ -11,6 +12,19 @@
           <canvas id="line" class="chart chart-line" chart-data="lineCtrl.data"
           chart-labels="lineCtrl.labels" chart-series="lineCtrl.series" chart-options="lineCtrl.options"
           chart-dataset-override="lineCtrl.datasetOverride" chart-click="lineCtrl.onClick">
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <!-- Bar Chart -->
+    <div class="col-sm-6">
+      <div class="panel panel-primary" ng-controller="StatsBarController as barCtrl">
+        <div class="panel-heading">
+          <h3 class="panel-title">Restaurant Revenue</h3>
+        </div>
+        <div class="panel-body">
+          <canvas id="bar" class="chart chart-bar"
+            chart-data="barCtrl.data" chart-labels="barCtrl.labels" chart-series="barCtrl.series">
           </canvas>
         </div>
       </div>
