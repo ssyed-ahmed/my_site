@@ -13,7 +13,7 @@
       {name: 'Specialities', imgSuffix: 'asterisk', path: 'public.specialities'},
       {name: 'Testimonials', imgSuffix: 'user', path: 'public.testimonials'},
       {name: 'Contact Us', imgSuffix: 'earphone', path: 'public.contactus'},
-      {name: 'Test', imgSuffix: 'equalizer', path: 'public.pagination'}
+      {name: 'Statistics', imgSuffix: 'equalizer', path: 'public.stats'}
     ];
 
     $scope.activeMenu = $scope.menuItems[0];

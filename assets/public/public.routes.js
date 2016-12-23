@@ -51,16 +51,11 @@
         url:'/todaysspecials',
         templateUrl: 'assets/todaysspecials/todaysspecials.html'
       })
-      .state('public.pagination', {
-        url: '/pagination',
-        templateUrl: 'assets/test/test.html',
-        controller: 'TestController',
-        controllerAs: 'testCtrl',
-        resolve: {
-          menuItems: ['MenuService', function(MenuService) {
-            return MenuService.getMenuItems();
-          }]
-        }
+      .state('public.stats', {
+        url: '/stats',
+        templateUrl: 'assets/stats/stats.html'/*,
+        controller: 'StatsController',
+        controllerAs: 'statsCtrl'*/
       });
   }
 })();
